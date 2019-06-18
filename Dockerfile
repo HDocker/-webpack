@@ -1,4 +1,3 @@
-
 FROM buildpack-deps:jessie
 
 RUN groupadd --gid 1000 node \
