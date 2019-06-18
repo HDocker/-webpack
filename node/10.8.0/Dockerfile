@@ -62,6 +62,11 @@ RUN set -ex \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz
 
 COPY docker-entrypoint.sh /usr/local/bin/
+
+RUN npm config set registry http://registry.npm.taobao.org
+RUN npm install -g webpack webpack-dev-server yarn
+COPY /usr/local/lib/node_modules/ /node_modules.bak/
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD [ "node" ]
