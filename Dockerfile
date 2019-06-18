@@ -69,6 +69,6 @@ RUN npm install -g webpack webpack-dev-server yarn
 RUN mkdir /node_modules.tmp
 RUN cp -r /usr/local/lib/node_modules/ /node_modules.tmp/
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"] 
 
 CMD [ "node" ]
