@@ -1,5 +1,5 @@
 
-FROM node:10
+FROM node
 MAINTAINER Justin Firth <jmfirth@gmail.com>
 
 RUN npm config set registry http://registry.npm.taobao.org
